@@ -5,8 +5,10 @@ it is a cross-distro package manager that uses shell scripts to install packages
 and that started shpkg/shpm's journey.
 
 24.11.2024 (us 11.24.2024) - shpkg/shpm was created
+
 ## how does it work?
 shpkg first searches for the desired package name ending with .sh in the `https://github.com/shpkg/repo` git repository. if it finds a match, it curl-bashes the script. else, it fails.
+
 ## what are the requirements for packages?
 well, let's see...
 - both software installed and the installer script **MUST** be open-source, accessible via a git/mercurial/subversion repository.
@@ -20,6 +22,7 @@ well, let's see...
 # shpkg-by! package-author
 ```
 at the top of the file, **AFTER** the shebang line.
+
 ## how can i add my package here?
 1. fork the git repository `https://github.com/shpkg/repo`.
 2. add your script to /. for example, if i wanted to add *betterfetch*, i would create a file called `betterfetch.sh`. make sure that you added the shpkg properties after the shebang line.
