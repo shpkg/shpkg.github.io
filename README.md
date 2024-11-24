@@ -7,7 +7,7 @@ and that started shpkg/shpm's journey.
 24.11.2024 (us 11.24.2024) - shpkg/shpm was created
 
 ## how does it work?
-shpkg first searches for the desired package name ending with .sh in the `https://github.com/shpkg/repo` git repository. if it finds a match, it curl-bashes the script. else, it fails.
+shpkg first searches for the desired package name ending with .sh in the `https://github.com/shpkg/repo` git repository. if it finds a match, it curl-bashes (to be exact, requests.get()) the script. else, it fails.
 
 ## what are the requirements for packages?
 well, let's see...
@@ -25,9 +25,10 @@ at the top of the file, **AFTER** the shebang line.
 
 ## how can i add my package here?
 1. fork the git repository `https://github.com/shpkg/repo`.
-2. add your script to /. for example, if i wanted to add *betterfetch*, i would create a file called `betterfetch.sh`. make sure that you added the shpkg properties after the shebang line.
-3. open a pull request. do not forget to answer the questions in the pull request template.
-4. wait! congrats, you just submitted your first ever sh package!
+2. add your install script to /install. for example, if i wanted to add *betterfetch*, i would create a file called `betterfetch.sh`. make sure that you added the shpkg properties after the shebang line.
+3. add your uninstall script to /uninstall. for example, if i wanted to add *betterfetch*, i would create a file called `betterfetch.sh`. make sure that you added the shpkg properties after the shebang line.
+4. open a pull request. do not forget to answer the questions in the pull request template.
+5. wait! congrats, you just submitted your first ever sh package!
 
 ## what's with the name? you always say shpkg/shpm instead shpkg.
 shpm was the codename of the project. but it sounds cool, so we use both.
