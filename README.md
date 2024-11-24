@@ -25,5 +25,6 @@ at the top of the file, **AFTER** the shebang line.
 2. add your script to /. for example, if i wanted to add *betterfetch*, i would create a file called `betterfetch.sh`. make sure that you added the shpkg properties after the shebang line.
 3. open a pull request. do not forget to answer the questions in the pull request template.
 4. wait! congrats, you just submitted your first ever sh package!
+
 ## what's with the name? you always say shpkg/shpm instead shpkg.
 shpm was the codename of the project. but it sounds cool, so we use both.
